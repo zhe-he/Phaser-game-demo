@@ -6,6 +6,8 @@ Vue.use(Router);
 const game1 = require('./views/game1.vue');
 const game2 = resolve => require(['./views/game2.vue'], resolve);
 const game3 = resolve => require(['./views/game3.vue'], resolve);
+const game4 = resolve => require(['./views/game4.vue'], resolve);
+const game5 = resolve => require(['./views/game5.vue'], resolve);
 
 
 const routes = [
@@ -30,6 +32,20 @@ const routes = [
     {
         path: '/game3',
         component: game3,
+        meta: {
+            keepAlive: true
+        }
+    },
+    {
+        path: '/game4',
+        component: game4,
+        meta: {
+            keepAlive: true
+        }
+    },
+    {
+        path: '/game5',
+        component: game5,
         meta: {
             keepAlive: true
         }
