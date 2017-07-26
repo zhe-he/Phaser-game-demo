@@ -18,6 +18,7 @@
         },
         mounted(){
             this.$nextTick(()=>{
+                document.title = "飞机大战";
                 this.style = {
                     width: window.innerWidth + 'px',
                     height: window.innerHeight + 'px'
@@ -443,6 +444,7 @@
         this.onReplayClick = function() {
             this.normalback.stop();
             game.state.start('start');
+            document.title = "飞机大战";
         }
         // 分享
         this.onShareClick = function() {
