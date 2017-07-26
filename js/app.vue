@@ -21,5 +21,5 @@
 </script>
 
 <style lang="sass">
-
+*{margin: 0; padding: 0;}
 </style>

@@ -10,15 +10,23 @@
     var scoreText;
     var lives;
     var bad;
-    var game = new Phaser.Game(800,600,Phaser.AUTO,'',{preload,create,update});
+    var game;
+
+    export default {
+        mounted(){
+            this.$nextTick(()=>{
+                game = new Phaser.Game(800,600,Phaser.AUTO,'game1',{preload,create,update});
+            })
+        }
+    }
 
     function preload(){
-        game.load.image('sky', 'images/game1/sky.png');
-        game.load.image('ground', 'images/game1/platform.png');  
-        game.load.image('star', 'images/game1/star.png');
-        game.load.image('villain', 'images/game1/firstaid.png');
-        game.load.spritesheet('dude', 'images/game1/dude.png', 32, 48);
-        game.load.spritesheet('baddie', 'images/game1/baddie.png', 32, 32); 
+        game.load.image('sky', './static/game1/sky.png');
+        game.load.image('ground', './static/game1/platform.png');  
+        game.load.image('star', './static/game1/star.png');
+        game.load.image('villain', './static/game1/firstaid.png');
+        game.load.spritesheet('dude', './static/game1/dude.png', 32, 48);
+        game.load.spritesheet('baddie', './static/game1/baddie.png', 32, 32); 
     }
     function create(){
         game.physics.startSystem(Phaser.Physics.ARCADE);

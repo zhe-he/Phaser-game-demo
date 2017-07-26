@@ -48,12 +48,12 @@ module.exports = {
         }),*/
         new ExtractTextPlugin('css/[name].css'),
         new CopyWebpackPlugin([
-            {from: 'images/**/*'}
+            {from: 'static/**/*'}
         ]),
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: 'index.html',
-            favicon: 'images/favicon.ico',
+            favicon: 'static/favicon.ico',
             minify: {
                 minimize: true,
                 removeComments: true,
